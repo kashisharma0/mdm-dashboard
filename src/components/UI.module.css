@@ -1,0 +1,93 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-family: var(--mono);
+  font-size: 10px;
+}
+.statusGreen { background: rgba(0,232,135,0.1); color: var(--green); border: 1px solid rgba(0,232,135,0.2); }
+.statusAmber { background: rgba(255,184,0,0.1); color: var(--amber); border: 1px solid rgba(255,184,0,0.2); }
+.statusRed   { background: rgba(255,69,96,0.1);  color: var(--red);   border: 1px solid rgba(255,69,96,0.2); }
+.statusGrey  { background: rgba(90,106,126,0.15); color: var(--grey);  border: 1px solid rgba(90,106,126,0.3); }
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+  border: none;
+  outline: none;
+}
+.btn:disabled { opacity: 0.35; cursor: not-allowed; pointer-events: none; }
+.btnPrimary  { background: var(--accent); color: #000; }
+.btnPrimary:hover { background: #00bde6; }
+.btnSecondary { background: var(--surface2); border: 1px solid var(--border2); color: var(--text2); }
+.btnSecondary:hover { border-color: var(--accent); color: var(--accent); }
+.btnDanger { background: rgba(255,69,96,0.12); border: 1px solid rgba(255,69,96,0.3); color: var(--red); }
+.btnDanger:hover { background: rgba(255,69,96,0.2); }
+.btnWarn { background: rgba(255,184,0,0.12); border: 1px solid rgba(255,184,0,0.3); color: var(--amber); }
+
+/* Tooltip */
+.tooltipWrap { position: relative; display: inline-block; }
+.tooltip {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--surface3);
+  border: 1px solid var(--border2);
+  color: var(--text2);
+  padding: 5px 9px;
+  border-radius: 5px;
+  font-size: 10px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s;
+  z-index: 100;
+}
+.tooltipWrap:hover .tooltip { opacity: 1; }
+
+/* Skeleton */
+.skeleton {
+  background: linear-gradient(90deg, var(--surface2) 25%, var(--surface3) 50%, var(--surface2) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 5px;
+}
+
+/* Modal */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.15s;
+}
+.modalBox {
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: 12px;
+  padding: 28px;
+  max-width: 420px;
+  width: 90%;
+}
+.modalTitle { font-size: 16px; font-weight: 600; margin-bottom: 10px; }
+.modalBody { font-size: 13px; color: var(--text2); margin-bottom: 24px; line-height: 1.6; }
+.modalActions { display: flex; gap: 10px; justify-content: flex-end; }
+
+/* Empty state */
+.emptyState { text-align: center; padding: 40px 20px; color: var(--text3); }
+.emptyIcon { font-size: 32px; margin-bottom: 10px; }
+.emptyText { font-family: var(--mono); font-size: 11px; }

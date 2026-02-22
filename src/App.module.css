@@ -1,0 +1,32 @@
+.shell { display: flex; height: 100vh; overflow: hidden; }
+.main  { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+.topbar {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+.pageTitle { font-family: var(--mono); font-size: 13px; color: var(--accent); letter-spacing: 1px; }
+.topbarRight { display: flex; align-items: center; gap: 16px; }
+.liveDot {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--green);
+}
+.liveDot::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  background: var(--green);
+  border-radius: 50%;
+  display: block;
+  animation: pulse 2s infinite;
+}
+.timestamp { font-family: var(--mono); font-size: 10px; color: var(--text3); }
+.content { flex: 1; overflow-y: auto; display: flex; flex-direction: column; }

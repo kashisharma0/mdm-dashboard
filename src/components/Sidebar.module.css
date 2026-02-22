@@ -1,0 +1,88 @@
+.sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.brand {
+  padding: 24px 20px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.brandTag {
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--accent);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.brandName { font-size: 15px; font-weight: 600; color: var(--text); }
+.nav { flex: 1; padding: 16px 0; overflow-y: auto; }
+.navSection {
+  padding: 0 12px 8px;
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--text3);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 16px;
+}
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 16px;
+  cursor: pointer;
+  color: var(--text2);
+  transition: all 0.15s;
+  border: none;
+  border-left: 2px solid transparent;
+  background: none;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  text-align: left;
+}
+.navItem:hover { color: var(--text); background: var(--surface2); }
+.navItemActive { color: var(--accent) !important; background: rgba(0,212,255,0.06) !important; border-left-color: var(--accent) !important; }
+.navIcon { font-size: 16px; width: 20px; text-align: center; }
+
+/* Role section */
+.roleSection { padding: 16px; border-top: 1px solid var(--border); }
+.roleLabel {
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--text3);
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.roleSelect {
+  width: 100%;
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  color: var(--text);
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-family: var(--sans);
+  font-size: 12px;
+  cursor: pointer;
+  outline: none;
+}
+.roleBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 8px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: var(--mono);
+  font-size: 10px;
+}
+.roleAdmin   { background: rgba(0,232,135,0.1);  color: var(--green);  border: 1px solid rgba(0,232,135,0.2); }
+.roleOps     { background: rgba(0,212,255,0.1);  color: var(--accent); border: 1px solid rgba(0,212,255,0.2); }
+.roleAnalyst { background: rgba(90,106,126,0.2); color: var(--text2);  border: 1px solid var(--border); }

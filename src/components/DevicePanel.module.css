@@ -1,0 +1,79 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 200;
+  display: flex;
+  justify-content: flex-end;
+  animation: fadeIn 0.2s;
+}
+.panel {
+  width: min(520px, 95vw);
+  height: 100vh;
+  background: var(--surface);
+  border-left: 1px solid var(--border);
+  overflow-y: auto;
+  animation: slideIn 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  padding: 20px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background: var(--surface);
+  z-index: 1;
+}
+.imei { font-family: var(--mono); font-size: 12px; color: var(--accent); }
+.model { font-size: 11px; color: var(--text2); margin-top: 3px; }
+.closeBtn {
+  background: none;
+  border: none;
+  color: var(--text2);
+  cursor: pointer;
+  font-size: 20px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.closeBtn:hover { color: var(--text); background: var(--surface2); }
+.body { padding: 20px; flex: 1; overflow-y: auto; }
+
+/* Compliance */
+.complianceRow { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+.compliancePill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-family: var(--mono);
+  font-size: 11px;
+}
+.c_compliant { background: rgba(0,232,135,0.1);  border: 1px solid rgba(0,232,135,0.25); color: var(--green); }
+.c_outdated  { background: rgba(255,184,0,0.1);  border: 1px solid rgba(255,184,0,0.25); color: var(--amber); }
+.c_blocked   { background: rgba(255,69,96,0.1);  border: 1px solid rgba(255,69,96,0.25); color: var(--red); }
+
+/* Meta grid */
+.metaGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 24px; }
+.metaItem {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 12px;
+}
+.metaKey { font-family: var(--mono); font-size: 9px; color: var(--text3); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 5px; }
+.metaVal { font-family: var(--mono); font-size: 12px; color: var(--text); }
+
+/* Timeline label */
+.tlLabel {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text3);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}

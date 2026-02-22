@@ -1,0 +1,85 @@
+.page { padding: 28px; flex: 1; overflow-y: auto; }
+.pageHeader { margin-bottom: 20px; }
+.pageTitle { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+.pageSub { font-size: 12px; color: var(--text2); }
+
+/* Tabs */
+.tabs { display: flex; gap: 2px; margin-bottom: 20px; background: var(--surface2); padding: 4px; border-radius: 8px; width: fit-content; }
+.tab { padding: 7px 16px; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 500; color: var(--text2); transition: all 0.15s; background: none; border: none; font-family: var(--sans); }
+.tab:hover { color: var(--text); }
+.tabActive { background: var(--surface3) !important; color: var(--text) !important; }
+
+/* Steps */
+.stepsBar { display: flex; align-items: center; margin-bottom: 28px; }
+.stepItem { display: flex; align-items: center; flex: 1; }
+.stepCol { display: flex; flex-direction: column; align-items: center; }
+.stepCircle { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 11px; font-weight: 700; flex-shrink: 0; transition: all 0.2s; }
+.stepDone    { background: var(--green);   color: #000; }
+.stepActive  { background: var(--accent);  color: #000; }
+.stepPending { background: var(--surface2); border: 1px solid var(--border2); color: var(--text3); }
+.stepLine { flex: 1; height: 2px; margin: 0 8px 18px; background: var(--border); }
+.stepLineDone { background: var(--green); }
+.stepLabel { display: block; font-size: 10px; color: var(--text3); margin-top: 6px; text-align: center; white-space: nowrap; font-family: var(--mono); }
+
+/* Form */
+.formCard { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px; margin-bottom: 16px; }
+.formCardTitle { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.formRow { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.formGroup { margin-bottom: 16px; }
+.formLabel { font-family: var(--mono); font-size: 10px; color: var(--text2); letter-spacing: 1px; text-transform: uppercase; display: block; margin-bottom: 7px; }
+.formInput { width: 100%; background: var(--surface2); border: 1px solid var(--border2); color: var(--text); padding: 10px 12px; border-radius: 6px; font-family: var(--sans); font-size: 13px; outline: none; transition: border-color 0.15s; }
+.formInput:focus { border-color: var(--accent); }
+.formInputError { border-color: var(--red) !important; }
+.formError   { font-size: 11px; color: var(--red); margin-top: 5px; }
+.formSuccess { font-size: 11px; color: var(--green); margin-top: 5px; }
+.formWarn    { font-size: 11px; color: var(--amber); margin-top: 5px; background: rgba(255,184,0,0.06); padding: 6px 10px; border-radius: 5px; border: 1px solid rgba(255,184,0,0.15); }
+.formHint    { font-size: 11px; color: var(--text2); margin-top: 4px; }
+.mt { margin-top: 12px; }
+.radioGroup { display: flex; gap: 10px; flex-wrap: wrap; }
+.radioBtn { padding: 8px 16px; border-radius: 6px; border: 1px solid var(--border2); color: var(--text2); cursor: pointer; font-size: 12px; transition: all 0.15s; background: var(--surface2); }
+.radioBtnActive { border-color: var(--accent); color: var(--accent); background: rgba(0,212,255,0.07); }
+
+/* Review */
+.reviewTable { border-radius: 8px; overflow: hidden; border: 1px solid var(--border); margin-bottom: 16px; }
+.reviewRow { display: flex; border-bottom: 1px solid var(--border); }
+.reviewRow:last-child { border-bottom: none; }
+.reviewKey { width: 160px; padding: 10px 14px; font-family: var(--mono); font-size: 10px; color: var(--text3); background: var(--surface2); flex-shrink: 0; text-transform: uppercase; }
+.reviewVal { padding: 10px 14px; font-size: 12px; color: var(--text); }
+
+/* Step Nav */
+.stepNav { display: flex; justify-content: space-between; margin-top: 24px; }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 6px; font-family: var(--sans); font-size: 12px; font-weight: 500; cursor: pointer; transition: all 0.15s; border: none; outline: none; }
+.btn:disabled { opacity: 0.35; cursor: not-allowed; pointer-events: none; }
+.btnPrimary   { background: var(--accent); color: #000; }
+.btnPrimary:hover { background: #00bde6; }
+.btnSecondary { background: var(--surface2); border: 1px solid var(--border2); color: var(--text2); }
+.btnSecondary:hover { border-color: var(--accent); color: var(--accent); }
+.btnDanger { background: rgba(255,69,96,0.12); border: 1px solid rgba(255,69,96,0.3); color: var(--red); }
+.btnWarn   { background: rgba(255,184,0,0.12);  border: 1px solid rgba(255,184,0,0.3);  color: var(--amber); }
+
+/* Success state */
+.successState { text-align: center; padding: 60px 20px; }
+.successIcon  { font-size: 48px; margin-bottom: 16px; }
+.successTitle { font-family: var(--mono); color: var(--green); font-size: 14px; margin-bottom: 8px; }
+.successSub   { color: var(--text2); font-size: 12px; margin-bottom: 24px; }
+
+/* Rollout */
+.rolloutCard { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px; margin-bottom: 16px; }
+.rolloutHeader { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 16px; gap: 10px; flex-wrap: wrap; }
+.rolloutTitleRow { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+.rolloutTitle { font-size: 14px; font-weight: 600; }
+.rolloutMeta  { font-family: var(--mono); font-size: 10px; color: var(--text3); }
+.rolloutActions { display: flex; gap: 8px; }
+.pendingBadge { display: inline-flex; align-items: center; gap: 5px; padding: 3px 8px; border-radius: 4px; font-family: var(--mono); font-size: 10px; background: rgba(255,184,0,0.1); border: 1px solid rgba(255,184,0,0.25); color: var(--amber); }
+.stageRow  { display: flex; gap: 2px; margin-bottom: 14px; }
+.stage     { flex: 1; }
+.stageTrack { height: 6px; background: var(--surface2); border-radius: 3px; }
+.stageFill  { height: 100%; border-radius: 3px; transition: width 0.5s; }
+.stageName  { font-family: var(--mono); font-size: 9px; color: var(--text3); text-transform: capitalize; margin-top: 4px; }
+.stageCount { font-size: 11px; color: var(--text2); }
+.rolloutFooter { display: flex; gap: 20px; font-family: var(--mono); font-size: 11px; color: var(--text2); }
+
+/* Card */
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px; margin-bottom: 16px; }
